@@ -1,0 +1,38 @@
+{
+  "name": "mylib",
+  "description": "desc1",
+  "author": {
+    "name": "a@a.com",
+    "email": "a@a.com"
+  },
+  "version": "0.0.1",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsx ../../scripts/devServer.ts"
+  },
+  "dependencies": {
+    "core-js": "^3.48.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "types": "./dist/*.d.mts",
+      "require": "./dist/*.cjs",
+      "import": "./dist/*.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "tsx": "^4.21.0"
+  }
+}

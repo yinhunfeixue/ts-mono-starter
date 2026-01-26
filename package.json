@@ -1,0 +1,45 @@
+{
+  "name": "ts-mono-starter",
+  "version": "1.0.0",
+  "description": "A TypeScript monorepo starter with Lerna, pnpm workspace, and dual module format support",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build --stream",
+    "dev": "lerna run dev --stream",
+    "version": "lerna version --no-push --exact --force-publish",
+    "clean": "lerna clean -y",
+    "depcheck": "depcheck && lerna exec depcheck",
+    "prebuild": "npm run depcheck",
+    "test": "npm run test --prefix test",
+    "newLib": "tsx ./scripts/createLib.ts",
+    "beta": "npm run build && npm run version && npx lerna publish from-package --dist-tag=beta",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "packageManager": "pnpm@10.24.0",
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.6",
+    "@babel/preset-typescript": "^7.28.5",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@types/adm-zip": "^0.5.7",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.10",
+    "adm-zip": "^0.5.16",
+    "chokidar": "^5.0.0",
+    "depcheck": "^1.4.7",
+    "husky": "^9.1.7",
+    "lerna": "^9.0.3",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "tsdown": "^0.20.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,css,scss}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "0.0.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:cjs && npm run test:esm",
+    "test:cjs": "jest --config=config/jest.config.cjs.ts",
+    "test:esm": "NODE_OPTIONS=--experimental-vm-modules jest --config=config/jest.config.esm.ts"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "dependencies": {
+    "mylib": "link:../packages/mylib"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6"
+  }
+}
