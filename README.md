@@ -1,6 +1,6 @@
 # ts-mono-starter
 
-`command`
+[English](./README.en.md) | 简体中文
 
 ## 概述
 
