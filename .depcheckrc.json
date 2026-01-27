@@ -1,3 +1,3 @@
 {
-  "ignores": ["core-js", "@babel/preset-env", "@babel/preset-typescript", "@types/jest"]
+  "ignores": ["core-js", "@babel/preset-env", "@babel/preset-typescript", "@types/jest", "prettier"]
 }
