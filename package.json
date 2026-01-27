@@ -12,6 +12,7 @@
     "depcheck": "depcheck && lerna exec depcheck",
     "prebuild": "npm run depcheck",
     "test": "npm run test --prefix test",
+    "lint": "eslint .",
     "newLib": "tsx ./scripts/createLib.ts",
     "beta": "npm run build && npm run version && npx lerna publish from-package --dist-tag=beta",
     "prepare": "husky"
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.28.6",
     "@babel/preset-typescript": "^7.28.5",
+    "@eslint/js": "^9.39.2",
     "@rollup/plugin-babel": "^6.1.0",
     "@types/adm-zip": "^0.5.7",
     "@types/jest": "^30.0.0",
@@ -29,16 +31,23 @@
     "adm-zip": "^0.5.16",
     "chokidar": "^5.0.0",
     "depcheck": "^1.4.7",
+    "eslint": "^9.39.2",
+    "globals": "^17.1.0",
     "husky": "^9.1.7",
     "lerna": "^9.0.3",
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "tsdown": "^0.20.1",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,md,css,scss}": [
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss}": [
       "prettier --write"
     ]
   }
