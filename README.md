@@ -10,20 +10,23 @@
 
 ### 命令
 
-| 功能     | 命令              |
-| -------- | ----------------- |
-| 构建     | `npm run build`   |
-| 开发模式 | `npm run dev`     |
-| 测试     | `npm run test`    |
-| 设置版本 | `npm run version` |
-| 添加子包 | `npm run newLib`  |
-| 发beta版 | `npm run beta`    |
+| 功能     | 命令               |
+| -------- | ------------------ |
+| 构建     | `npm run build`    |
+| 开发模式 | `npm run dev`      |
+| 测试     | `npm run test`     |
+| 代码检查 | `npm run lint`     |
+| 依赖检查 | `npm run depcheck` |
+| 清理     | `npm run clean`    |
+| 设置版本 | `npm run version`  |
+| 添加子包 | `npm run newlib`   |
+| 发beta版 | `npm run beta`     |
 
 ## 目录结构
 
 ### 脚手架
 
-```shell
+```bash
 test        # 自动化测试项目
 scripts     # 打包脚本和配置
 packages    # 子包
@@ -31,7 +34,7 @@ packages    # 子包
 
 ### 库
 
-```sh
+```bash
 src     # 源码目录
 assets  # 静态文件
 ```

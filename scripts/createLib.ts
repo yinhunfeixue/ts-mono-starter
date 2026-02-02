@@ -36,9 +36,9 @@ async function main() {
   try {
     const projectName = await getNonEmptyInput('Project name: ');
     const projectDescription = await getNonEmptyInput('Description: ');
+    const authorName = await getNonEmptyInput('Author name: ');
     const email = await getNonEmptyInput('Email: ');
 
-    const author = email.trim();
     const unzipPath = path.join('packages', projectName);
 
     if (await fs.stat(unzipPath).catch(() => false)) {
@@ -59,7 +59,7 @@ async function main() {
     packageJson = {
       name: projectName,
       description: projectDescription,
-      author: { name: author, email: author },
+      author: { name: authorName, email: email },
       ...packageJson
     };
 

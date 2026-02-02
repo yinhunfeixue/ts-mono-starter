@@ -10,7 +10,7 @@ const babelPlugin = babel({
       {
         targets: { node: 20 },
         useBuiltIns: 'usage',
-        corejs: '3.48'
+        corejs: '3.48.0'
       }
     ]
   ]

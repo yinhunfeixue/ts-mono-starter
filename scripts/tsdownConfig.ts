@@ -1,5 +1,5 @@
 import { defineConfig } from 'tsdown';
-import babelPlugin from './plugins/BabelPlugin.ts';
+import babelPlugin from './plugins/babelPlugin.ts';
 
 const development = process.env.NODE_ENV === 'development';
 
