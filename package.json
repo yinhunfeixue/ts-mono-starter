@@ -4,6 +4,10 @@
   "description": "A TypeScript monorepo starter with Lerna, pnpm workspace, and dual module format support",
   "type": "module",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "test"
+  ],
   "scripts": {
     "build": "lerna run build --stream",
     "dev": "lerna run dev --stream",
@@ -19,7 +23,6 @@
   },
   "keywords": [],
   "license": "ISC",
-  "packageManager": "pnpm@10.24.0",
   "devDependencies": {
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-typescript": "^7.28.5",

@@ -10,7 +10,7 @@
   },
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
-    "mylib": "link:../packages/mylib"
+    "mylib": "file:../packages/mylib"
   },
   "devDependencies": {
     "vitest": "^4.0.18"
